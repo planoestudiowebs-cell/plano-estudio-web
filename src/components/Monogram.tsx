@@ -1,4 +1,5 @@
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 
 export default function Monogram({ 
   size = 48, 
@@ -14,7 +15,7 @@ export default function Monogram({
     visible: { 
       pathLength: 1, 
       opacity: 1, 
-      transition: { duration: 4, ease: "easeInOut" } 
+      transition: { duration: 4, ease: [0.42, 0, 0.58, 1] }
     }
   };
 
