@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tinta: #10211A;
+  --color-bronce: #B08D57;
+  --color-marfil: #F2EAD8;
+  --color-piedra: #B9AFA0;
+  --color-hueso: #F7F2E8;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Fraunces', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  html, body {
+    @apply bg-tinta text-hueso font-sans antialiased min-h-screen selection:bg-bronce/30 selection:text-hueso;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-normal;
+  }
+}
+
+.custom-cursor-active,
+.custom-cursor-active * {
+  cursor: none !important;
+}
+
