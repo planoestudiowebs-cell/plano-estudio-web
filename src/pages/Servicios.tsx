@@ -120,6 +120,8 @@ export default function Servicios() {
           ))}
         </div>
 
+        <div className="text-center text-xs text-hueso/60 mt-6">Precios expresados en pesos mexicanos (MXN) · No incluyen IVA</div>
+
         {/* Investment Notes */}
         <motion.div 
           initial={{ opacity: 0 }}

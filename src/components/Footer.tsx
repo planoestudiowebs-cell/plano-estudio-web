@@ -30,6 +30,12 @@ export default function Footer() {
           <Link to="/contacto" className="hover:text-bronce transition-colors">Contacto</Link>
         </div>
 
+        <div className="mt-4 text-[11px] text-hueso/30 flex gap-4">
+          <Link to="/terminos" className="hover:text-bronce transition-colors">Términos y Condiciones</Link>
+          <span className="opacity-40">·</span>
+          <Link to="/privacidad" className="hover:text-bronce transition-colors">Aviso de Privacidad</Link>
+        </div>
+
         <p className="text-[10px] uppercase tracking-widest text-piedra/60 font-mono mt-12">
           &copy; {new Date().getFullYear()} PLANO ESTUDIO. Todos los derechos reservados.
         </p>
