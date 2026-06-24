@@ -1,4 +1,3 @@
-import React from 'react';
 import Monogram from '../components/Monogram';
 
 export default function TerminosCondiciones() {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const STORAGE_KEY = 'pe_cookies_accepted';
 
