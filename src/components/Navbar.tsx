@@ -27,7 +27,7 @@ export default function Navbar() {
               <Link 
                 key={link.path} 
                 to={link.path}
-                className={`group relative text-xs uppercase tracking-[0.2em] transition-colors py-2 ${
+                className={`group relative text-xs uppercase tracking-[0.2em] transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-bronce focus:ring-offset-2 focus:ring-offset-tinta rounded-sm ${
                   isActive 
                     ? 'text-bronce font-medium' 
                     : 'text-hueso/80 hover:text-bronce'
@@ -47,7 +47,7 @@ export default function Navbar() {
             href="https://wa.me/525636800314?text=Hola,%20quiero%20cotizar%20un%20sitio%20web%20con%20PLANO%20ESTUDIO"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-mono tracking-[0.2em] uppercase border border-bronce text-bronce px-6 py-2.5 hover:bg-bronce/10 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(176,141,87,0.3)] transition-all duration-300 ml-4"
+            className="text-xs font-mono tracking-[0.2em] uppercase border border-bronce text-bronce px-6 py-2.5 hover:bg-bronce/10 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(176,141,87,0.3)] transition-all duration-300 ml-4 focus:outline-none focus:ring-2 focus:ring-bronce focus:ring-offset-2 focus:ring-offset-tinta"
           >
             Cotizar
           </a>

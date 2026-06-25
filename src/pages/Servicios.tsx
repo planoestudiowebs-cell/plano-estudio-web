@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Monogram from '../components/Monogram';
+import SEO from '../components/SEO';
 
 export default function Servicios() {
   const tiers = [
@@ -24,9 +25,9 @@ export default function Servicios() {
       features: [
         'Sitio multi-sección ampliado (Hero, Servicios, Sobre, Galería, Contacto)',
         'Animaciones con Framer Motion (scroll reveals, micro-interacciones)',
-        'Formulario de contacto funcional con notificación por correo',
+        'Formulario de contacto (vía correo) y enlaces sociales',
         'Optimización de Google Business Profile (ficha, categorías, fotos)',
-        'Configuración de Google Analytics + Search Console',
+        'Configuración inicial de Google Analytics (opcional)',
         '2 rondas de revisiones',
         'Entrega en 10–14 días'
       ],
@@ -50,10 +51,15 @@ export default function Servicios() {
 
   return (
     <div className="pt-20 bg-tinta min-h-screen relative overflow-hidden">
+      <SEO 
+        title="Servicios y Precios" 
+        description="Paquetes de diseño web para negocios locales. Inversiones claras y transparentes: Esencial, Profesional y Signature. Sitio web propio, dominio a tu nombre."
+        canonicalUrl="https://planoestudio.mx/servicios"
+      />
       {/* Subtle Background Texture/Image */}
       <div 
         className="absolute inset-0 z-0 opacity-10 bg-cover bg-center bg-no-repeat pointer-events-none grayscale"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=2070&auto=format&fit=crop")' }}
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1600607688969-a5bfcd646154?q=80&w=1200&auto=format&fit=crop")' }}
       />
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-tinta/80 to-tinta opacity-90 pointer-events-none" />
       
@@ -64,7 +70,7 @@ export default function Servicios() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-serif text-hueso mb-8 tracking-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-serif text-hueso mb-8 tracking-tight break-words"
           >
             <span className="font-bold">Nuestros</span> <span className="italic font-light">Servicios</span>
           </motion.h1>
@@ -72,7 +78,7 @@ export default function Servicios() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-piedra font-light text-lg max-w-2xl mx-auto"
+            className="text-piedra font-light text-base md:text-lg max-w-2xl mx-auto"
           >
             Inversiones claras y transparentes para potenciar la presencia digital de tu negocio.
           </motion.p>
@@ -86,7 +92,7 @@ export default function Servicios() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 + index * 0.2 }}
-              className={`relative border border-bronce/80 p-10 md:p-14 flex flex-col h-full bg-tinta/80 backdrop-blur-sm group hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] hover:border-bronce transition-all duration-500 ease-out ${tier.offsetClass}`}
+              className={`relative border border-bronce/80 p-8 md:p-14 flex flex-col h-full bg-tinta/80 backdrop-blur-sm group hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] hover:border-bronce transition-all duration-500 ease-out ${tier.offsetClass}`}
             >
               {/* Corner Monogram */}
               <div className="absolute top-8 right-8 text-bronce/30 transition-colors duration-500 group-hover:text-bronce/60">
@@ -98,7 +104,7 @@ export default function Servicios() {
 
               <ul className="space-y-5 mb-16 flex-grow">
                 {tier.features.map((feature, i) => (
-                  <li key={i} className="flex gap-4 items-start text-piedra font-light text-sm">
+                  <li key={i} className="flex gap-4 items-start text-piedra font-light text-xs sm:text-sm">
                     <span className="text-bronce mt-1 block w-4 flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity">—</span>
                     <span className="leading-relaxed">{feature}</span>
                   </li>
@@ -109,7 +115,7 @@ export default function Servicios() {
                 href={`https://wa.me/525636800314?text=${encodeURIComponent(tier.whatsappText)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto block text-center w-full py-5 border border-bronce text-bronce font-mono uppercase tracking-[0.2em] text-xs hover:bg-bronce/10 transition-colors"
+                className="mt-auto block text-center w-full py-5 border border-bronce text-bronce font-mono uppercase tracking-[0.2em] text-[10px] sm:text-xs hover:bg-bronce/10 transition-colors focus:outline-none focus:ring-2 focus:ring-bronce focus:ring-offset-2 focus:ring-offset-tinta"
               >
                 Cotizar por WhatsApp
               </a>
@@ -119,8 +125,6 @@ export default function Servicios() {
             </motion.div>
           ))}
         </div>
-
-        <div className="text-center text-xs text-hueso/60 mt-6">Precios expresados en pesos mexicanos (MXN) · No incluyen IVA</div>
 
         {/* Investment Notes */}
         <motion.div 
@@ -140,9 +144,9 @@ export default function Servicios() {
             <div className="flex flex-col md:flex-row gap-6 md:gap-12 group">
               <div className="text-bronce font-medium md:w-1/3 flex-shrink-0 tracking-widest uppercase">
                 Dominio aparte <br/>
-                <span className="text-xs opacity-60 font-light mt-1 block tracking-normal normal-case">(~$300–500 MXN/año vía Namecheap)</span>
+                <span className="text-[10px] sm:text-xs opacity-60 font-light mt-1 block tracking-normal normal-case">(~$300–500 MXN/año vía Namecheap)</span>
               </div>
-              <div className="md:w-2/3 group-hover:text-piedra/80 transition-colors font-sans font-light text-base">
+              <div className="md:w-2/3 group-hover:text-piedra/80 transition-colors font-sans font-light text-sm sm:text-base">
                 El dominio queda registrado directamente a tu nombre, así tú tienes la propiedad y el control total — nunca dependes de nosotros para conservarlo.
               </div>
             </div>
@@ -150,19 +154,19 @@ export default function Servicios() {
             <div className="flex flex-col md:flex-row gap-6 md:gap-12 group">
               <div className="text-bronce font-medium md:w-1/3 flex-shrink-0 tracking-widest uppercase">
                 Hosting en Netlify <br/>
-                <span className="text-xs opacity-60 font-light mt-1 block tracking-normal normal-case">(tier gratuito)</span>
+                <span className="text-[10px] sm:text-xs opacity-60 font-light mt-1 block tracking-normal normal-case">(tier gratuito)</span>
               </div>
-              <div className="md:w-2/3 group-hover:text-piedra/80 transition-colors font-sans font-light text-base">
-                Tu sitio queda alojado sin costo adicional de hosting, lo que reduce tus gastos fijos mientras tu negocio crece.
+              <div className="md:w-2/3 group-hover:text-piedra/80 transition-colors font-sans font-light text-sm sm:text-base">
+                Tu sitio queda alojado sin costo adicional de hosting en una infraestructura rápida y segura, lo que reduce tus gastos fijos mientras tu negocio crece.
               </div>
             </div>
 
             <div className="flex flex-col md:flex-row gap-6 md:gap-12 group">
               <div className="text-bronce font-medium md:w-1/3 flex-shrink-0 tracking-widest uppercase">
                 Esquema de pago <br/>
-                <span className="text-xs opacity-60 font-light mt-1 block tracking-normal normal-case">(50% / 50%)</span>
+                <span className="text-[10px] sm:text-xs opacity-60 font-light mt-1 block tracking-normal normal-case">(50% / 50%)</span>
               </div>
-              <div className="md:w-2/3 group-hover:text-piedra/80 transition-colors font-sans font-light text-base">
+              <div className="md:w-2/3 group-hover:text-piedra/80 transition-colors font-sans font-light text-sm sm:text-base">
                 Divides la inversión en dos partes (anticipo y contra entrega) y solo cubres el resto cuando ya viste el sitio terminado y funcionando, dándote seguridad durante todo el proceso.
               </div>
             </div>

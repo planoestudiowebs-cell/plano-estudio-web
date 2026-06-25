@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
 import Monogram from '../components/Monogram';
+import SEO from '../components/SEO';
 
 export default function SobreNosotros() {
   return (
     <div className="pt-20 bg-tinta min-h-screen">
+      <SEO 
+        title="Sobre Nosotros" 
+        description="Conoce el enfoque artesanal y dedicado detrás de PLANO ESTUDIO. Diseñamos sitios web a la medida para negocios con visión en México."
+        canonicalUrl="https://planoestudio.mx/sobre-nosotros"
+      />
       <div className="max-w-7xl mx-auto px-6 py-32 lg:py-48">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
           
@@ -17,7 +23,7 @@ export default function SobreNosotros() {
             <div className="aspect-[3/4] overflow-hidden relative border border-bronce/20 p-2">
               <div 
                 className="absolute inset-2 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop")' }}
+                style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop")' }}
               />
               {/* Vignette & Duotone Overlay */}
               <div className="absolute inset-2 bg-tinta/40 mix-blend-multiply" />
@@ -40,12 +46,12 @@ export default function SobreNosotros() {
           >
             <div className="w-16 h-px bg-bronce mb-12" />
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-hueso mb-10 leading-[1.1] tracking-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-hueso mb-10 leading-[1.1] tracking-tight break-words">
               <span className="font-bold">Diseño con</span> <br />
               <span className="italic font-light">propósito y detalle.</span>
             </h1>
 
-            <div className="space-y-8 text-piedra font-light text-lg leading-relaxed mb-20">
+            <div className="space-y-8 text-piedra font-light text-base md:text-lg leading-relaxed mb-20">
               <p>
                 PLANO ESTUDIO es un atelier digital en crecimiento, nacido en la Ciudad de México con una convicción clara: los pequeños negocios locales merecen una presencia web con el mismo nivel de refinamiento que las grandes marcas.
               </p>
@@ -62,21 +68,21 @@ export default function SobreNosotros() {
                 <span className="text-bronce font-mono text-sm tracking-widest mt-1 block">01</span>
                 <div>
                   <h4 className="text-hueso text-xl font-serif mb-3 group-hover:text-bronce transition-colors">Entendimiento</h4>
-                  <p className="text-piedra font-light leading-relaxed">Escuchamos la historia de tu negocio, tu visión y qué es lo que te hace diferente en tu industria.</p>
+                  <p className="text-piedra font-light leading-relaxed text-sm md:text-base">Escuchamos la historia de tu negocio, tu visión y qué es lo que te hace diferente en tu industria.</p>
                 </div>
               </li>
               <li className="flex gap-6 group">
                 <span className="text-bronce font-mono text-sm tracking-widest mt-1 block">02</span>
                 <div>
                   <h4 className="text-hueso text-xl font-serif mb-3 group-hover:text-bronce transition-colors">Propuesta Visual</h4>
-                  <p className="text-piedra font-light leading-relaxed">Diseñamos una identidad digital alineada a tu estética, prestando atención a la tipografía, el color y la experiencia del usuario.</p>
+                  <p className="text-piedra font-light leading-relaxed text-sm md:text-base">Diseñamos una identidad digital alineada a tu estética, prestando atención a la tipografía, el color y la experiencia del usuario.</p>
                 </div>
               </li>
               <li className="flex gap-6 group">
                 <span className="text-bronce font-mono text-sm tracking-widest mt-1 block">03</span>
                 <div>
                   <h4 className="text-hueso text-xl font-serif mb-3 group-hover:text-bronce transition-colors">Desarrollo y Lanzamiento</h4>
-                  <p className="text-piedra font-light leading-relaxed">Escribimos código limpio y optimizado para que tu sitio sea rápido y funcione perfectamente en cualquier dispositivo.</p>
+                  <p className="text-piedra font-light leading-relaxed text-sm md:text-base">Escribimos código limpio y optimizado para que tu sitio sea rápido y funcione perfectamente en cualquier dispositivo.</p>
                 </div>
               </li>
             </ul>
